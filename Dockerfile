@@ -15,13 +15,14 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
   && DEBIAN_FRONTEND=noninteractive apt-get -qq -y --no-install-recommends install \
      apt-transport-https \
      ca-certificates \
+     iproute2 \
      libfreetype6-dev \
      libjpeg-dev \
      libpng-dev \
      libmcrypt-dev \
      libxslt1-dev \
-     supervisor \
      nginx \
+     supervisor \
   \
   # confd \
   && curl -sSL -o /usr/local/bin/confd \
@@ -45,7 +46,5 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
   && apt-get auto-remove -qq -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
-
-COPY root /
   
 ENTRYPOINT ["/entrypoint.sh"]
