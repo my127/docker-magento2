@@ -2,6 +2,7 @@ FROM php:7.1-fpm-alpine
 
 RUN apk --update add \
   # package dependencies \
+    bash \
     freetype \
     icu \
     iproute2 \
