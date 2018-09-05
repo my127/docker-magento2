@@ -10,6 +10,7 @@ RUN apk --update add \
     libmcrypt \
     libpng libxml2 \
     libxslt \
+    shadow \
     supervisor \
   # package dependencies only needed for the duration of the build \
     autoconf \
