@@ -34,7 +34,7 @@ RUN apk --update add \
     && docker-php-ext-install soap \
     && docker-php-ext-install xsl \
     && docker-php-ext-install zip \
-    && pecl install xdebug && docker-php-ext-enable xdebug \
+    && printf "\n" | pecl install xdebug && docker-php-ext-enable xdebug \
   # clean \
     && apk del \
     autoconf g++ make freetype-dev libjpeg-turbo-dev libpng-dev openssl-dev libxml2-dev libmcrypt-dev libxslt-dev icu-dev \
