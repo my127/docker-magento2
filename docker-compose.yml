@@ -33,7 +33,7 @@ services:
     image: my127/magento2:7.1-fpm-stretch-console
     build:
       context: ./
-      dockerfile: base.Dockerfile
+      dockerfile: console.Dockerfile
       args:
         VERSION: 7.1
 
@@ -41,7 +41,7 @@ services:
     image: my127/magento2:7.2-fpm-stretch-console
     build:
       context: ./
-      dockerfile: base.Dockerfile
+      dockerfile: console.Dockerfile
       args:
         VERSION: 7.2
 
@@ -49,6 +49,6 @@ services:
     image: my127/magento2:7.3-fpm-stretch-console
     build:
       context: ./
-      dockerfile: base.Dockerfile
+      dockerfile: console.Dockerfile
       args:
         VERSION: 7.3
